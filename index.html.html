@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAE LADYS - Elegant Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .product-card { transition: transform 0.3s ease; }
+        .product-card:hover { transform: scale(1.05); }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; }
+        .modal-content { max-width: 90%; max-height: 90%; margin: 5% auto; }
+        .close { position: absolute; top: 10px; right: 20px; color: white; font-size: 30px; cursor: pointer; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-purple-600 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">UAE LADYS</h1>
+            <nav>
+                <a href="#products" class="px-4 hover:underline">Products</a>
+                <a href="#contact" class="px-4 hover:underline">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Discover Elegance with UAE LADYS</h2>
+            <p class="text-lg mb-6">Explore our exclusive collection designed for you.</p>
+            <a href="#products" class="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Choose</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-4">
+                <!-- Product Cards (10 Products) -->
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/Dano.jpg" alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Hansi</h3>
+                        <p class="text-gray-600">31</p>
+                        <button onclick="handleProductClick(1, 'image/Dano.jpg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/colombo.jpg" alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">chaduni</h3>
+                        <p class="text-gray-600">29</p>
+                        <button onclick="handleProductClick(2, 'image/colombo.jpg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/download.jpeg" alt="Product 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Chathu</h3>
+                        <p class="text-gray-600">28</p>
+                        <button onclick="handleProductClick(3, 'image/download.jpeg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/mayara.jpg" alt="Product 4" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">sakunthala</h3>
+                        <p class="text-gray-600">32</p>
+                        <button onclick="handleProductClick(4, 'image/mayara.jpg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/Prashaa Michael.jpeg" alt="Product 5" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Dinithi</h3>
+                        <p class="text-gray-600">26</p>
+                        <button onclick="handleProductClick(5, 'image/Prashaa Michael.jpeg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/Sri Lanka Girl ❤️.jpeg" alt="Product 6" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">kalpani</h3>
+                        <p class="text-gray-600">33</p>
+                        <button onclick="handleProductClick(6, 'image/Sri Lanka Girl ❤️.jpeg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/Dinith.jpg" alt="Product 7" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Pharshani</h3>
+                        <p class="text-gray-600">27</p>
+                        <button onclick="handleProductClick(7, 'image/Dinith.jpg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/Chinki Minki.jpeg" alt="Product 8" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">lakshani</h3>
+                        <p class="text-gray-600">35</p>
+                        <button onclick="handleProductClick(8, 'image/Chinki Minki.jpeg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/Beautiful Girl.jpeg" alt="Product 9" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Lasinduni</h3>
+                        <p class="text-gray-600">31</p>
+                        <button onclick="handleProductClick(9, 'image/Beautiful Girl.jpeg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/Sithara Suraweera ❤.jpeg" alt="Product 10" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">waruni</h3>
+                        <p class="text-gray-600">34</p>
+                        <button onclick="handleProductClick(10, 'image/Sithara Suraweera ❤.jpeg')" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">See Full Photo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+            <p class="mb-6">Have questions? Reach out to us!</p>
+            <p>Email: support@uaeladys.com</p>
+            
+        </div>
+    </section>
+
+    <!-- Modal for Full Photo -->
+    <div id="photoModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content" src="" alt="Full Product Image">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Store click counts for each product
+        const clickCounts = {};
+
+        function handleProductClick(productId, fullImageUrl) {
+            // Initialize click count for the product if not exists
+            if (!clickCounts[productId]) {
+                clickCounts[productId] = 0;
+            }
+
+            // Increment click count
+            clickCounts[productId]++;
+
+            if (clickCounts[productId] === 1) {
+                // First click: Redirect to ad
+                window.open('https://www.profitableratecpm.com/j3bcvy8kt?key=05d73bce16373e962dce820d2ab802e3', '_blank');
+            } else {
+                // Second click or more: Show full photo in modal
+                const modal = document.getElementById('photoModal');
+                const modalImage = document.getElementById('modalImage');
+                modalImage.src = fullImageUrl;
+                modal.style.display = 'block';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('photoModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('photoModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
